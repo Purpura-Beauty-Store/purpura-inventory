@@ -1,0 +1,18 @@
+﻿services:
+  purpura-inventory:
+    container_name: purpura-inventory
+    image: purpura-inventory
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: "${APP_UID}"
+    environment:
+      - "ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT}"
+    ports:
+      - "8080"
+    networks:
+      - purpura-network
+
+networks:
+  purpura-network:
+    external: true
