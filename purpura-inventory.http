@@ -1,0 +1,6 @@
+@purpura_inventory_HostAddress = http://localhost:5204
+
+GET {{purpura_inventory_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
